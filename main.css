@@ -989,20 +989,19 @@ h1 {
 
   /*Service*/
   #servicehead {
-    padding: 140px 50% 40px 10%;
+    padding: 100px 30% 40px 10%;
   }
 
   #servicehead h1 {
-    font-size: 60px;
+    font-size: 45px;
   }
 
   #servicebody {
-    padding: 0px 10% 100px 10%;
+    padding: 0px 10% 70px 10%;
   }
 
   #servicebody p {
-    font-size: 22px;
-    color: #666;
+    font-size: 18px;
   }
 
 
