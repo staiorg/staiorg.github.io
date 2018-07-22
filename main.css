@@ -213,7 +213,7 @@ h1 {
   padding: 0;
   margin: 0;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 #recenthead {
@@ -768,6 +768,8 @@ h1 {
 
   #headerimg {
     width: 200%;
+    height: 150%;
+    bottom: -200px;
   }
 
   #header iframe {
@@ -811,8 +813,8 @@ h1 {
   }
 
   #recentvideos .fas {
-    font-size: 26px;
-    top: 120px;
+    font-size: 22px;
+    top: 90px;
   }
 
   .recentvid {
@@ -823,11 +825,11 @@ h1 {
 
   .recentvid iframe {
     width: 100%;
-    height: 300px;
+    height: 250px;
   }
 
   #emaillist {
-    padding: 380px 10% 80px 10%;
+    padding: 330px 10% 80px 10%;
     text-align: center;
   }
 
