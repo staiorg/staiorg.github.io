@@ -62,6 +62,14 @@ h1 {
   float: right;
 }
 
+#container1 {
+  display: none;
+}
+
+#phonenavlinks {
+  display: none;
+}
+
 #home {
   position: absolute;
   z-index: 89;
@@ -130,6 +138,10 @@ h1 {
   height: 110%;
   left: 0;
   margin: 0;
+}
+
+#header iframe {
+  height: 370px;
 }
 
 .butt {
@@ -250,6 +262,7 @@ h1 {
 
 .recentvid iframe {
   width: 100%;
+  height: 400px;
 }
 
 #recentvid1 {
@@ -651,5 +664,346 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  #back2top {
+    padding: 16px;
+  }
+
+  #back2top i {
+    font-size: 25px;
+  }
+
+  .navig {
+    display: none;
+  }
+
+  #navbar {
+    padding: 30px 0px;
+  }
+
+  #home {
+    display: block;
+    top: 0px;
+    left: -20px;
+  }
+
+  #home img {
+    width: 120px;
+  }
+
+  #container1 {
+    display: block;
+    position: fixed;
+    right: 4px;
+    top: 0px;
+    background-color: white;
+    z-index: 90;
+    padding: 10px;
+    transition-duration: 0.2s;
+  }
+
+  #container1:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .bar1, .bar2 {
+    width: 40px;
+    height: 3px;
+    margin: 10px 0px;
+    background: #ea4a67;
+    transition-duration: 0.2s;
+  }
+
+  .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-5px, 7px);
+      transform: rotate(-45deg) translate(-5px, 7px);
+  }
+
+  .change .bar2 {
+      -webkit-transform: rotate(45deg) translate(-2px, -4px);
+      transform: rotate(45deg) translate(-2px, -4px);
+  }
+
+  #phonenavlinks {
+    background-color: white;
+    padding: 70px 30px 40px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 60;
+  }
+
+  .navig2 {
+    list-style-type: none;
+    padding: 15px 0px;
+    text-align: center;
+  }
+
+  .navig2 a {
+    color: #ea4a67;
+    font-size: 23px;
+    transition-duration: 0.2s;
+  }
+
+  .navig2 a:hover {
+    color: #78e0ef;
+    text-decoration: none;
+  }
+
+  .butt {
+    font-size: 20px;
+    padding: 12px 30px;
+    border-radius: 20px;
+  }
+
+  #header {
+    padding: 100px 10% 110px 10%;
+  }
+
+  #header h1 {
+    font-size: 45px;
+    padding-bottom: 30px;
+  }
+
+  #headerimg {
+    width: 200%;
+  }
+
+  #header iframe {
+    height: 240px;
+    margin-top: 50px;
+  }
+
+  #header p {
+    font-size: 20px;
+  }
+
+  #intro {
+    padding: 0px 6% 60px 6%;
+  }
+
+  .title {
+    font-size: 38px;
+    padding-bottom: 30px;
+  }
+
+  #intro .col-sm-6 {
+    padding: 20px 40px;
+  }
+
+  #intro i {
+    font-size: 50px;
+  }
+
+  #intro h2 {
+    font-size: 28px;
+    padding: 15px 0px;
+  }
+
+  #intro p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  #recenthead {
+    font-size: 24px;
+  }
+
+  #recentvideos .fas {
+    font-size: 26px;
+    top: 120px;
+  }
+
+  .recentvid {
+    position: absolute;
+    width: 50%;
+    transition-duration: 0.3s;
+  }
+
+  .recentvid iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  #emaillist {
+    padding: 380px 10% 80px 10%;
+    text-align: center;
+  }
+
+  #emaillist input {
+    margin: 0px 60% 20px 0%;
+    display: block;
+    font-size: 20px;
+  }
+
+  #contact {
+    background-color: #eee;
+    padding: 80px 6%;
+    color: #444;
+  }
+
+  #contact h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #social .fab {
+    font-size: 35px;
+  }
+
+  #footer {
+    background-color: #444;
+    padding: 10px 5%;
+  }
+
+  #footer p {
+    font-size: 16px;
+  }
+
+  /*About*/
+  #abouthead {
+    padding: 100px 30% 40px 10%;
+  }
+
+  #abouthead h1 {
+    font-size: 40px;
+  }
+
+  .aboutmenu {
+    display: none;
+  }
+
+  #open .fas {
+    margin: 0px 2px 8px 2px;
+    font-size: 12px;
+  }
+
+  #story {
+    padding: 0px 10% 60px 10%;
+  }
+
+  #story p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  #storyimg {
+    display: none;
+  }
+
+  #mission {
+    padding: 100px 0% 130px 0%;
+    position: relative;
+  }
+
+  #missionimg {
+    position: absolute;
+    height: 100%;
+    width: 180%;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  #mission h3 {
+    font-size: 38px;
+    padding: 0px 10% 0px 20%;
+
+  }
+
+  #mission p {
+    font-size: 20px;
+    padding: 20px 10% 10px 20%;
+  }
+
+  #team {
+    padding: 100px 10% 400px 10%;
+    margin-top: -40px;
+
+  }
+
+  #team h3 {
+    font-size: 40px;
+  }
+
+  /*Videos*/
+  #videoshead {
+    padding: 100px 6% 40px 6%;
+    text-align: center;
+  }
+
+  #videoshead h1 {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+
+  #search {
+    width: 90%;
+    padding: 3px;
+    font-size: 24px;
+    border: 0;
+    border-bottom: 2px solid #aaa;
+    transition-duration: 0.4s;
+    outline: 0;
+    margin: 0px 5% 30px 5%;
+    display: block;
+  }
+
+  #search:focus {
+    border-bottom: 4px solid #ea4a67;
+    width: 100%;
+    margin: 0px 0% 30px 0%;
+  }
+
+  #searchsubmit {
+    font-size: 20px;
+  }
+
+  #videosmenu {
+    padding: 20px 10% 20px 10%;
+    background-color: #ea4a67;
+  }
+
+  #sorter p {
+    font-size: 22px;
+    display: block;
+    color: white;
+    margin: 0px 0px 10px 20px;
+  }
+
+  .sortbutt {
+    font-size: 18px;
+    padding: 5px 18px;
+  }
+
+  .sortbutt:hover {
+    color: white;
+    background-color: #d2c794;
+  }
+
+  #videosbody {
+    padding: 100px 10% 500px 10%;
+  }
+
+  /*Service*/
+  #servicehead {
+    padding: 140px 50% 40px 10%;
+  }
+
+  #servicehead h1 {
+    font-size: 60px;
+  }
+
+  #servicebody {
+    padding: 0px 10% 100px 10%;
+  }
+
+  #servicebody p {
+    font-size: 22px;
+    color: #666;
+  }
+
+
+
 
 }

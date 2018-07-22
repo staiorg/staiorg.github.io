@@ -10,6 +10,11 @@ function toleft() {
   $("#recentvid3").css("left", "100%");
 }
 
+function rotate(x) {
+    x.classList.toggle("change");
+    $("#phonenavlinks").slideToggle("fast");
+}
+
 $(document).ready(function(){
           $("#open").click(function(){
               $(".aboutmenu").toggleClass("aboutout");
