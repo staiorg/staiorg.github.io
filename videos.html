@@ -9,13 +9,16 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-    <script src="index.js">
-    </script>
+    <script src="index.js"></script>
+    
+    <script src="app.js"></script>
 <body>
 		<div id="navbar">
 			<ul id="nav" class="fader">
@@ -42,11 +45,11 @@
 		<div id="videoshead">
 			<h1>Videos</h1>
 			<div class="search-container" class="slideup">
-					    <form action="/action_page.php">
-					      <input type="text" placeholder="Search.." id="search" name="search">
-					      <button type="submit" id="searchsubmit" class="butt">Search <i class="fa fa-search"></i></button>
-					    </form>
-			  		</div>
+				<form>
+					<input type="text" placeholder="Search.." id="search" name="search">
+					<button type="submit" id="searchsubmit" class="butt">Search <i class="fa fa-search"></i></button>
+				</form>
+			</div>
 		</div>
 		<div id="videosmenu">
 			<div id="sorter">
