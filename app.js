@@ -43,7 +43,7 @@ $(function(){
 			});
 			resetVideoHeight();
 		});
-}
+});
 
 $('#popbutt').on('click', function(){
 	order = "viewCount";
@@ -74,7 +74,11 @@ function tplawesome(template, data) {
 	for(var i = 0; i < data.length; i++) {
 		res = res.replace(/\{\{(.*?)\}\}/g, function(match, j) { // some magic regex
 			return data[i][j];
-		})
+		});
 	}
 	return res;
 }
+
+
+
+
