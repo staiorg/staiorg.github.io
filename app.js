@@ -2,9 +2,8 @@
 // TODO: run from Apache server to avoid error
 //$.getScript("tplawesome.js");
 
-$(function(){
-	$("form").on("submit",function(e){
-		e.preventDefault();
+function search() {
+		event.preventDefault();
 		// prepare YouTube Search API request
 		var request = gapi.client.youtube.search.list({
 			part: "snippet",
@@ -27,8 +26,7 @@ $(function(){
 			});
 			resetVideoHeight();
 		});
-	});
-});
+}
 
 function init(){
 	gapi.client.setApiKey("AIzaSyA38kJ-p-UZLgjf3QWqKbABsgLFiAqbXfg");
