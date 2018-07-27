@@ -2,13 +2,11 @@
 // TODO: run from Apache server to avoid error
 //$.getScript("tplawesome.js");
 
-function search() {
-		event.preventDefault();
-		// prepare YouTube Search API request
-// default is date
-var order = "date";
-
 $(function(){
+	// default is date
+	var order = "date";
+	console.log("Document ready");
+	
 	$("form").on("submit",function(e){
 		e.preventDefault();
 		
@@ -43,6 +41,7 @@ $(function(){
 			});
 			resetVideoHeight();
 		});
+	});
 });
 
 $('#popbutt').on('click', function(){
@@ -64,7 +63,7 @@ function init(){
 }
 
 function resetVideoHeight() {
-    $(".video").css("height", $("#videosbody").width() * 9/16);
+	$(".video").css("height", $("#videosbody").width() * 9/16);
 }
 
 function tplawesome(template, data) {
