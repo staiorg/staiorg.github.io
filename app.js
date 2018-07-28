@@ -7,7 +7,7 @@ $(function(){
 	var order = "date";
 	console.log("Document ready.");
 	
-	$("#searchForm").on("submit",function(e){
+	$("form").on("submit",function(e){
 		e.preventDefault();
 		console.log("Submitting form...");
 		
@@ -64,9 +64,6 @@ $(function(){
 	});
 	
 	$(window).on("resize", resetVideoHeight);
-	
-	// show all videos
-	//document.forms["searchForm"].submit();
 });
 
 // when the filter buttons are clicked, set filters
@@ -92,7 +89,8 @@ function init(){
 		//console.log("YouTube Search API is ready");
 	});
 	
-	
+	// show all videos
+	document.forms["searchForm"].submit();
 }
 
 // video formatting
