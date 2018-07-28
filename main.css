@@ -984,7 +984,11 @@ h1 {
   }
 
   #videosbody {
-    padding: 100px 10% 500px 10%;
+    padding: 60px 10% 100px 10%;
+  }
+
+  .video {
+    padding-bottom: 100px;
   }
 
   /*Service*/
