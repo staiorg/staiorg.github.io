@@ -90,7 +90,7 @@ function init(){
 	});
 	
 	// show all videos
-	//document.forms["searchForm"].submit();
+	document.forms["myForm"].submit();
 }
 
 // video formatting
