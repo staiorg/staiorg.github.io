@@ -9,6 +9,7 @@ $(function(){
 	
 	$("form").on("submit",function(e){
 		e.preventDefault();
+		console.log("Submitting form");
 		
 		// build YouTube Search API request
 		var request = gapi.client.youtube.search.list({
@@ -42,23 +43,29 @@ $(function(){
 			resetVideoHeight();
 		});
 	});
+	
+	$(window).on("resize", resetVideoHeight);
 });
 
 $('#popbutt').on('click', function(){
 	order = "viewCount";
+	console.log(order);
 });
 
 $('#recbutt').on('click', function(){
 	order = "date";
+	console.log(order);
 });
 
 function init(){
+	
+	console.log("running the init method");
 	
 	// TODO hide API key
 	gapi.client.setApiKey("AIzaSyA38kJ-p-UZLgjf3QWqKbABsgLFiAqbXfg");
 	gapi.client.load("youtube","v3",function(){
 		// yt api is ready
-		console.log("YouTube Search API is ready");
+		//console.log("YouTube Search API is ready");
 	});
 }
 
