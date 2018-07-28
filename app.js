@@ -92,10 +92,10 @@ function init(){
 	});
 	
 	// show all videos
-	if (!loaded){
+	/*if (!loaded){
 		$(function(){document.forms["myform"].submit();});
 		loaded = true;
-	}
+	}*/
 }
 
 // video formatting
