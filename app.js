@@ -7,7 +7,7 @@ $(function(){
 	var order = "date";
 	console.log("Document ready.");
 	
-	$("form").on("submit",function(e){
+	$("#searchForm").on("submit",function(e){
 		e.preventDefault();
 		console.log("Submitting form...");
 		
@@ -42,6 +42,8 @@ $(function(){
 			// empty video display div
 			$("#videosbody").html("");
 			
+			console.log("Number of search results: "+results.length);
+			
 			// if there are no applicable results, tell user
 			if (results.length == 0){
 				
@@ -62,6 +64,9 @@ $(function(){
 	});
 	
 	$(window).on("resize", resetVideoHeight);
+	
+	// show all videos
+	document.forms["searchForm"].submit();
 });
 
 // when the filter buttons are clicked, set filters
@@ -86,6 +91,8 @@ function init(){
 		// yt api is ready
 		//console.log("YouTube Search API is ready");
 	});
+	
+	
 }
 
 // video formatting
