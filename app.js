@@ -42,10 +42,10 @@ $(function(){
 			// empty video display div
 			$("#videosbody").html("");
 			
-			console.log("Number of search results: "+results.length);
+			console.log("Number of search results: "+results.items.length);
 			
 			// if there are no applicable results, tell user
-			if (results.length == 0){
+			if (results.items.length == 0){
 				
 				console.log("No search results found.");
 				$("#videosbody").html('No tutorials found. Try entering something else.');
@@ -90,7 +90,7 @@ function init(){
 	});
 	
 	// show all videos
-	$(function(){document.forms["myForm"].submit();});
+	$(function(){document.forms["myform"].submit();});
 }
 
 // video formatting
