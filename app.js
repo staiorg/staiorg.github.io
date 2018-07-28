@@ -66,7 +66,7 @@ $(function(){
 	$(window).on("resize", resetVideoHeight);
 	
 	// show all videos
-	document.forms["searchForm"].submit();
+	//document.forms["searchForm"].submit();
 });
 
 // when the filter buttons are clicked, set filters
