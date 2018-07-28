@@ -5,11 +5,11 @@
 $(function(){
 	// default is date
 	var order = "date";
-	console.log("Document ready");
+	console.log("Document ready.");
 	
 	$("form").on("submit",function(e){
 		e.preventDefault();
-		console.log("Submitting form");
+		console.log("Submitting form...");
 		
 		// build YouTube Search API request
 		var request = gapi.client.youtube.search.list({
@@ -18,7 +18,7 @@ $(function(){
 			part: "snippet",
 			type: "video",
 			
-			// replace spaces with pluses
+			// replace spaces with pluses for GET request
 			q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
 			
 			// number and order of videos received
@@ -28,25 +28,43 @@ $(function(){
 			
 			// specify that we only want videos from our channel
 			channelId: "UCdXtMm5nSlpZez3nkciKpng"
+			
 		});
 		
+		// execute HTTP request
 		request.execute(function(response){
-			console.log("Executed search request!");
 			
+			console.log("Executed search request.");
+			
+			// collect results
 			var results = response.result;
+			
+			// empty video display div
 			$("#videosbody").html("");
-			$.each(results.items, function(index, item) {
-				$.get("item.html", function(data) {
-					$("#videosbody").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+			
+			// if there are no applicable results, tell user
+			if (results.length == 0){
+				
+				console.log("No search results found.");
+				$("#videosbody").html('No tutorials found. Try entering something else.');
+				
+			} 
+			// otherwise, show the results to user
+			else {
+				$.each(results.items, function(index, item) {
+					$.get("item.html", function(data) {
+						$("#videosbody").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+					});
 				});
-			});
-			resetVideoHeight();
+				resetVideoHeight();
+			}
 		});
 	});
 	
 	$(window).on("resize", resetVideoHeight);
 });
 
+// when the filter buttons are clicked, set filters
 $('#popbutt').on('click', function(){
 	order = "viewCount";
 	console.log(order);
@@ -57,9 +75,10 @@ $('#recbutt').on('click', function(){
 	console.log(order);
 });
 
+// function to initialize gAPI client
 function init(){
 	
-	console.log("running the init method");
+	console.log("Initializing Google API client.");
 	
 	// TODO hide API key
 	gapi.client.setApiKey("AIzaSyA38kJ-p-UZLgjf3QWqKbABsgLFiAqbXfg");
@@ -69,6 +88,7 @@ function init(){
 	});
 }
 
+// video formatting
 function resetVideoHeight() {
 	$(".video").css("height", $("#videosbody").width() * 9/16);
 }
