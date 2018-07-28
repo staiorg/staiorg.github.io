@@ -2,6 +2,8 @@
 // TODO: run from Apache server to avoid error
 //$.getScript("tplawesome.js");
 
+var loaded = false;
+
 $(function(){
 	// default is date
 	var order = "date";
@@ -90,7 +92,10 @@ function init(){
 	});
 	
 	// show all videos
-	$(function(){document.forms["myform"].submit();});
+	if (!loaded){
+		$(function(){document.forms["myform"].submit();});
+		loaded = true;
+	}
 }
 
 // video formatting
