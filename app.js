@@ -91,7 +91,7 @@ function init(){
 	
 	// show all videos
 	$(function(){
-		//e.preventDefault();
+		e.preventDefault();
 		console.log("Submitting form...");
 		
 		// build YouTube Search API request
